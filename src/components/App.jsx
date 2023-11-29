@@ -88,13 +88,14 @@ useEffect(() => {
     data
     .then(
       pictures =>{setPictures(prevPictures => [...prevPictures, ...pictures.hits]);
-    setTotal(prevTotal => prevTotal + pictures.total)})
+    setTotal(prevTotal => prevTotal = pictures.total)})
     .catch(error => setError(error))
     .finally(setIsLoading(false))
     }
 
 }, [query, page])
-
+console.log(total);
+console.log(pictures.length);
   
   // componentDidUpdate(prevProps, prevState) {
   //   if (prevState.query !== this.state.query || prevState.page !== this.state.page) {
